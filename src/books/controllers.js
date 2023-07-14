@@ -1,10 +1,20 @@
 const { response } = require("express");
 const Book = require("./model");
-const Author = require("../authors/model") //connects author model
+const Author = require("../authors/model"); //connects author model
+const Genre = require("../genres/model");
 
 // Adds a book to the DB
 const addBook = async (req, res) => {
     try {
+
+        const genre = await Genre.findOne({
+            where: {genreName: req.body.genre}
+        })
+
+        console.log("!!!!!!")
+        console.log (genre)
+        console.log("!!!!!!")
+
 
         const author = await Author.findOne({
             where: {authorName: req.body.author}
@@ -18,7 +28,8 @@ const addBook = async (req, res) => {
             title: req.body.title,
             author: req.body.author,
             genre: req.body.genre,
-            AuthorId: author.id
+            AuthorId: author.id,
+            GenreId: genre.id
         })
 
         res.status(201).json({message: "success", book: newBook}) 

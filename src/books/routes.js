@@ -13,8 +13,5 @@ bookRouter.put("/books/updatebook", updateBook)
 bookRouter.delete("/books/deletebytitle", deleteByTitleBook)
 bookRouter.delete("/books/deleteallbooks", deleteAllBooks)
 
-
-
-
 // Exports MovieRouter (function) so it can be used elsewhere (in other pages).
 module.exports = bookRouter

@@ -17,7 +17,7 @@ const addAuthor = async (req, res) => {
 
 };
 
-// Adds an author to the database
+// Get Authors and associated books
 const getAuthorsandBooks = async (req, res) => {
     try {
         const author = await Author.findOne({
