@@ -2,7 +2,8 @@ const { response } = require("express");
 const Author = require("./model");
 const Book = require("../books/model")
 
-// Adds an author to the database
+// Adds an author to the database 
+// Await (waiting on a reponse for the data)
 const addAuthor = async (req, res) => {
     try {
         const author = await Author.create({

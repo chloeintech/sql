@@ -2,7 +2,7 @@ require("dotenv").config(); // initialised dot env
 
 const express= require("express"); // initialises express for the db
 
-const port = process.env.PORT || 5001 ; // adds the port - .env port or 5001 (future proofs code)
+const port = process.env.PORT || 5001 ; // adds the port - .env port or 5001 (future proofs code), make sure to define in .env code
 
 const app = express(); // express is what we use to run the server
 

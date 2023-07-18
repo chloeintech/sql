@@ -1,6 +1,6 @@
 const {Sequelize} = require ("sequelize") // install sequelize 
 
-const connection = new Sequelize(process.env.MY_SQL_URI) // connection from.env file
+const connection = new Sequelize(process.env.MY_SQL_URI) // connection from.env file to database
 
 connection.authenticate() //authenticates connection
 
